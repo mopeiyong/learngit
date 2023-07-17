@@ -23,5 +23,7 @@
 
 分支合并情况:git log --graph --pretty=oneline --abbrev-commit
 
+禁用Fast forward，创建新的commit:git merge --no-ff -m "merge with no-ff" <name>
+
 Creating a new branch is quick and simple.
 merge
