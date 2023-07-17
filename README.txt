@@ -22,8 +22,4 @@
 删除分支：git branch -d <name>
 
 
-<<<<<<< HEAD
 Creating a new branch is quick and simple.
-=======
-Creating is a new branch is qucik AND simple.
->>>>>>> f1
