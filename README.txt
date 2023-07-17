@@ -31,7 +31,7 @@
 git stash pop或（git stash apply恢复，再用git stash drop删除stash内容）
 ，回到工作现场；
 查看stash内容存储:git stash list
-
+在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动
 
 Creating a new branch is quick and simple.
 merge
