@@ -7,4 +7,4 @@
 查看历史提交记录:git log
 查看历史提交记录，将每个提交放在一行显示:git log --pretty=oneline
 查看命令历史:git reflog
-
+撤销工作区修改:git checkout file
