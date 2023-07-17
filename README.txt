@@ -9,3 +9,5 @@
 查看命令历史:git reflog
 撤销工作区修改:git checkout <name>
 撤销暂存区内容:git reset HEAD <name>
+确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit;
+删错了:git checkout -- <name>
