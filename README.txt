@@ -24,3 +24,4 @@
 分支合并情况:git log --graph --pretty=oneline --abbrev-commit
 
 Creating a new branch is quick and simple.
+merge
