@@ -25,5 +25,13 @@
 
 禁用Fast forward，创建新的commit:git merge --no-ff -m "merge with no-ff" <name>
 
+修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+当手头工作没有完成时，先把工作现场git stash
+一下，然后去修复bug，修复后，再
+git stash pop或（git stash apply恢复，再用git stash drop删除stash内容）
+，回到工作现场；
+查看stash内容存储:git stash list
+
+
 Creating a new branch is quick and simple.
 merge
