@@ -21,5 +21,6 @@
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
 
+分支合并情况:git log --graph --pretty=oneline --abbrev-commit
 
 Creating a new branch is quick and simple.
