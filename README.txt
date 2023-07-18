@@ -59,5 +59,15 @@ git stash pop或（git stash apply恢复，再用git stash drop删除stash内容
 命令git tag -d <tagname>可以删除一个本地标签；
 命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
 
+忽略某些文件时，需要编写.gitignore
+例：	# 排除所有.开头的隐藏文件:
+	.*
+	# 排除所有.class文件:
+	*.class
+	# 不排除.gitignore和App.class:
+	!.gitignore
+	!App.class
+
+
 Creating a new branch is quick and simple.
 merge
