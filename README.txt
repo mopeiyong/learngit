@@ -18,6 +18,7 @@ git 常用命令
 		git log -p:显示日志的同时显示改动
 		git log --stat:显示改动了哪些文件
 		git log --pretty=oneline --abbrev-commit:查看历史提交记录，将每个提交放在一行显示
+		git blame <file>:以列表形式查看指定文件的历史修改记录
 	git branch
 		git branch:查看分支
 		git branch <name>:创建分支
