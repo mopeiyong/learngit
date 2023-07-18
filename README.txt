@@ -28,7 +28,21 @@ git 常用命令
 		git branch -M <oldbranch> <newbranch>:重命名分支
 		git branch <branchname> <start-point>:基于提交<start-point>创建分支
 	将暂存区的文件提交到本地仓库:git commit -m "message"
-	查看修改内容:git diff <name>
+	git diff
+		git diff:对比当前工作区与暂存区的差异
+		git diff --cached:对比暂存区与上个提交的差异
+		git diff --<name>:查看具体某个文件 在工作区和暂存区之间的差异
+		git diff <point_1> <point_2>:对比两次提交间的差异
+		git diff <branch1> <branch2>:对比分支间的差异
+	git stash
+		git stash:保存当前工作 进度，分别保存暂存区和工作区
+		git stash list :显示进度列表
+		git stash pop:恢复最新保存的工作进度，并删除该进度
+		git stash apply [--index] [<stash>]:应用某个index进度，不删除该进度	
+		git stash drop:删除stash进度
+		修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+		当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop或（git stash apply恢复，再用git stash drop删除stash内容），回到工作现场；
+		查看stash内容存储:git stash list在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动
 	回退当前工程的版本:git reset --hard commit_id/git reset --hard HEAD^
 	查看命令历史:git reflog
 	撤销工作区修改:git checkout <name>
@@ -36,19 +50,12 @@ git 常用命令
 	确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit;
 	删错了:git checkout -- <name>
 
+
 上传:git push origin master
 
 分支合并情况:git log --graph --pretty=oneline --abbrev-commit
 
 禁用Fast forward，创建新的commit:git merge --no-ff -m "merge with no-ff" <name>
-
-修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
-当手头工作没有完成时，先把工作现场git stash
-一下，然后去修复bug，修复后，再
-git stash pop或（git stash apply恢复，再用git stash drop删除stash内容）
-，回到工作现场；
-查看stash内容存储:git stash list
-在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动
 
 开发一个新feature，最好新建一个分支；
 如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
