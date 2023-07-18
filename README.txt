@@ -18,7 +18,6 @@ git 常用命令
 		git log -p:显示日志的同时显示改动
 		git log --stat:显示改动了哪些文件
 		git log --pretty=oneline --abbrev-commit:查看历史提交记录，将每个提交放在一行显示
-		git blame <file>:以列表形式查看指定文件的历史修改记录
 			-p：显示提交的补丁（具体更改内容）。
 			--oneline：以简洁的一行格式显示提交信息。
 			--graph：以图形化方式显示分支和合并历史。
@@ -31,6 +30,13 @@ git 常用命令
 			--stat：显示简略统计信息，包括修改的文件和行数。
 			--abbrev-commit：使用短提交哈希值。
 			--pretty=<格式>：使用自定义的提交信息显示格式。
+	git blame
+		git blame <file>:以列表形式查看指定文件的历史修改记录
+		git blame -L <起始行号>,<结束行号> <文件路径>:只显示指定行号范围内的代码注释
+		git blame -C <文件路径>:对于重命名或拷贝的代码行进行溯源
+		git blame -M <文件路径>:对于移动的代码行进行溯源
+		git blame --show-stats <文件路径>:显示行数统计信息
+		-C -C 或 -M -M：对于较多改动的代码行，进行更进一步的溯源
 	git branch
 		git branch:查看分支
 		git branch <name>:创建分支
