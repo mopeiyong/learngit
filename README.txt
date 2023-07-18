@@ -34,6 +34,10 @@ git 常用命令
 		git diff --<name>:查看具体某个文件 在工作区和暂存区之间的差异
 		git diff <point_1> <point_2>:对比两次提交间的差异
 		git diff <branch1> <branch2>:对比分支间的差异
+	git show
+		git show:显示当前HEAD指向的提交内容
+		git show [point]:显示指定提交point的内容
+		git show --stat:显示当前HEAD指向提交的相关文件信息
 	git stash
 		git stash:保存当前工作 进度，分别保存暂存区和工作区
 		git stash list :显示进度列表
