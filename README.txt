@@ -66,6 +66,11 @@ git 常用命令
 		修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
 		当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop或（git stash apply恢复，再用git stash drop删除stash内容），回到工作现场；
 		查看stash内容存储:git stash list在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动
+	git cherry-pick
+		对于多分支的代码库，将代码从一个分支转移到另一个分支是常见需求。
+		这时分两种情况。一种情况是，你需要另一个分支的所有代码变动，那么就采用合并（git merge）。另一种情况是，你只需要部分代码变动（某几个提交），这时可以采用 Cherry pick。
+
+
 	回退当前工程的版本:git reset --hard commit_id/git reset --hard HEAD^
 	查看命令历史:git reflog
 	撤销工作区修改:git checkout <name>
@@ -114,6 +119,8 @@ git 常用命令
 	# 不排除.gitignore和App.class:
 	!.gitignore
 	!App.class
+
+
 
 
 Creating a new branch is quick and simple.
